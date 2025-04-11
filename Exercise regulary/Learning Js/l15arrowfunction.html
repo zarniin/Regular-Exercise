@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arrow Function</title>
+	</head>
+	<body>
+
+
+		<script type="text/javascript">
+
+			// Single Parameter Function 
+
+				// Method 1 
+				const arrfun1 = () =>{
+					const num1 = 100;
+					return num1;
+				}
+
+				// Method 2
+				console.log("This is arrfun1 = ",arrfun1());// This is arrfun1 =  100
+
+				const arrfun2 = (num2) =>{
+					return num2;
+				}
+
+				console.log("This is arrfun2 = ",arrfun2(200));// This is arrfun3 =  200
+
+				// Method 3
+				const arrfun3 = num3 => num3;
+
+				console.log("This is arrfun3 = ",arrfun3(300));// This is arrfun3 =  300
+
+			// Multi Parameter Function 
+
+				const arrfun4 = (num4=100,num5=200) =>{
+					const result = num4+num5;
+					return result;
+				}
+
+				console.log("This is arrfun4 = ",arrfun4(10,20));//This is arrfun4 =  30
+
+
+
+			
+		</script>
+		
+	</body>
+</html>

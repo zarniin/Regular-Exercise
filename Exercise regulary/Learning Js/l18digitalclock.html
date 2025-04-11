@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digital Clock</title>
+		<style type="text/css">
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+				background-color: #000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.display{
+				width: 300px;
+				height: 100px;
+				background-color: #f4f4f4;
+				color: #000;
+				font-size: 20px;
+				letter-spacing: 1px;
+				border-radius: 10px;
+
+				text-align: center;
+				line-height: 100px;
+
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="display">00:00:00 PM</div>
+
+		<script type="text/javascript">
+
+			const days = ["Sunday","Monday","Tueday","Wednesday","Thusday","Friday","Saturday"]
+
+			const getdisplay = document.querySelector('.display');
+			// console.log(getdisplay);
+
+			function movingsetclock(){
+				const getdate = new Date();
+				// console.log(getdate);
+
+				let getHours = getdate.getHours();
+				// console.log(getHours);
+
+				const getMinutes = getdate.getMinutes();
+				// console.log(getMinutes);
+
+				const getSeconds = getdate.getSeconds();
+				// console.log(getSeconds);
+
+				const getday = getdate.getDay();
+				// console.log(days[getday]);
+
+				let getampm;
+
+				switch(getHours > 12){
+					case true:
+						getampm = "PM";
+						getHours = getHours - 12;
+						break;
+
+					case false: 
+						getampm = "AM";
+						break;
+				}
+
+				// console.log(getampm);
+
+				const setclock = `${getHours} : ${getMinutes} : ${getSeconds} : ${getampm}  ${days[getday]} `;
+				// console.log(setclock);
+
+				getdisplay.innerHTML = setclock;
+				
+			}
+
+			movingsetclock();
+
+			setInterval(movingsetclock,1000);
+
+
+			
+		</script>
+		
+	</body>
+</html>

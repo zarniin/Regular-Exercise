@@ -1,0 +1,23 @@
+body{
+	font-family: sans-serif;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0;
+	margin: 0;
+}
+
+.form-group .form-control{
+	padding: 10px;
+}
+
+.game .btn{
+	padding: 10px;
+}
+
+.game span{
+	display: block;
+}

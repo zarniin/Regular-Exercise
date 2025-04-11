@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Small Design</title>
+		<style type="text/css">
+			body{
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				padding: 0;
+				margin: 0;
+			}
+
+			.spinner{
+				width: 300px;
+
+				animation-name: myspinner;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes myspinner{
+				from{
+					transform: rotate(0deg);
+				}
+
+				to{
+					transform: rotate(1turn);
+				}
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+
+
+		<img src="./img/loader.svg" class="spinner" align="loader/svg" />
+		
+	</body>
+</html>

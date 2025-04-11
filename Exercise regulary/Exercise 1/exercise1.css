@@ -1,0 +1,72 @@
+.box{
+	width: 600px;
+	height: 600px;
+/*	background-color: green;*/
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+}
+
+.box .boxone{
+	width: 300px;
+	height: 300px;
+	background-color: skyblue;
+	border-radius: 50%;
+
+	position: absolute;
+
+	z-index: 2;
+}
+
+.box .boxtwo{
+	width: 320px;
+	height: 320px;
+	background-color: steelblue;
+	border-radius: 50%;
+
+	position: absolute;
+
+	z-index: 1;
+}
+
+.pointercontainer{
+	width: 20px;
+	height: 200px;
+/*	background-color: gray;*/
+
+	position: absolute;
+	top: 100px;
+
+	animation-name: myani;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	transform-origin: bottom;
+
+	z-index: 3;
+}
+
+.pointer{
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	border-radius: 50%;
+
+	display: block;
+}
+
+@keyframes myani{
+
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+	}
+}
+

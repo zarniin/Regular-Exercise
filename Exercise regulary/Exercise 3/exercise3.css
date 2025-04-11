@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+:root{
+	--wcc: #f4f4f4;
+	--gyc: #777;
+	--dbc: darkblue;
+	--occ: orange;
+	--gnc: green;
+	--org: #5b7874;
+}
+*{
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+
+	background: var(--gyc);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	width: 480px;
+	background-color: var(--org);
+	box-shadow: 0px 5px 40px #7871de;
+}
+
+.container h2{
+	text-align: center;
+	font-family: 'Stick';
+}
+
+.container .form{
+	padding: 30px 40px;
+}
+
+.form .form-group{
+	margin-bottom: 10px;
+}
+
+.form-group label{
+	display: block;
+	color: var(--dbc);
+	font-family: 'Stick';
+	font-size: 18px;
+	margin-bottom: 10px;
+
+	text-shadow: 0px 10px 20px rgba(0,0,0,0.6);
+}
+
+.form-group .form-control{
+	width: 100%;
+	background: linear-gradient(
+		45deg,
+		red,
+		blue,
+		skyblue
+	);
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	outline: none;
+	box-shadow: 0px 9px 18px rgba(0,0,0,0.8);
+	
+}
+
+.form-group .form-control::placeholder{
+	font-family: "Stick";
+	color: rgba(0,0,0,0.8);
+}
+
+.form .btn{
+	width: 100%;
+	background-color: purple;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0px 5px 14px rgba(0,0,0,0.7);
+
+	cursor: pointer;
+
+	transition: background-color .5s;
+}
+
+.form .btn:hover{
+	background-color: orange;
+}
+
+.form .btn:active{
+	background-color: skyblue;
+}
+
+

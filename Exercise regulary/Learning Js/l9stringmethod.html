@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Method</title>
+    </head>
+    <body>
+        
+
+        <script type="text/javascript">
+
+            // Concat() Method
+            let fullname = "R zar ni";
+            let nickname = " Zar Zar";
+
+            console.log(fullname+nickname);
+            console.log(fullname.concat(nickname));
+
+            // =>Append(+=)
+
+            let firstname = "Honey Nway";
+            let lastname = " Oo";
+
+            // firstname = lastname;
+            // lastname += firstname
+            firstname += lastname;
+
+            // console.log(firstname+lastname);
+            console.log(firstname);
+
+            // String Character array is js
+            const sentence = "My Hobbies is sport";
+            console.log(sentence);
+            console.log(typeof sentence);// string
+            console.log(sentence.length);// 19
+
+            // chartAt() Method 
+            const numbers = "A number is 100 to 1000";
+            // console.log(numbers);
+            // console.log(numbers.length);
+            // console.log(numbers.charAt(9));
+            console.log(numbers.charAt(3));
+
+            // includes() Method (True/False)
+            const paragraph = "My Fav color is pink. page number 90";
+            console.log(paragraph.includes("Fav"));// True
+            console.log(paragraph.includes("80"));// False
+
+            // replace(old,new) 
+            const hobbies = "My Hobbies is Watching TV and movie and series."
+            // console.log(hobbies);
+            console.log(hobbies.replace("movie","baskball"));
+
+            // substring(index,length) 
+            const game = "My fav game is mobile legend Bang Bang.";
+            // console.log(game);
+            console.log(game.substring(0,11).concat("[....]"));
+
+            // Change Case 
+            const cases = "My Hobbies is Web Developer Juiner";
+            // console.log(cases);
+            console.log(cases.toUpperCase());
+            console.log(cases.toLocaleUpperCase());
+            console.log(cases.toLowerCase());
+            console.log(cases.toLocaleLowerCase());
+
+        </script>
+
+    </body>
+</html>

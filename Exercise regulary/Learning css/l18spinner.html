@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spinner By CSS</title>
+		<style type="text/css">
+
+			body{
+				height: 100vh;
+				background-color: #000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.spinnerone,.spinnertwo,.spinnerthree,.spinnerfour{
+				width: 100px;
+				height: 100px;
+/*				background-color: green;*/
+				border-radius: 50%;
+				border: 10px solid #fff;
+				border-top: 10px solid steelblue;
+
+				animation: myspinner 2s infinite linear;
+			}
+
+			.spinnertwo{
+				border-top: 10px solid steelblue;
+				border-bottom: 10px solid darkblue;
+			}
+
+			.spinnerthree{
+				border-left: 10px solid deepskyblue;
+				border-top: 10px solid steelblue;
+				border-bottom: 10px solid darkblue;
+			}
+
+			.spinnerfour{
+				border-left: 10px solid deepskyblue;
+				border-top: 10px solid steelblue;
+				border-right: 10px solid darkorchid;
+				border-bottom: 10px solid darkblue;
+			}
+
+			@keyframes myspinner{
+				from{
+					transform: rotate(0deg);
+				}
+
+				to{
+					transform: rotate(360deg);
+				}
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="spinnerone"></div>
+		<div class="spinnertwo"></div>
+		<div class="spinnerthree"></div>
+		<div class="spinnerfour"></div>
+
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover Me</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.btn{
+				width: 300px;
+				height: 100px;
+				background: linear-gradient(200deg,steelblue,pink);
+				color: #000;
+				font-size: 40px;
+				border: none;
+				border-radius: 50px;
+
+				position: relative;
+			}
+
+			.btn::after{
+				content: '10% OFF';
+				background-color: yellow;
+				font-size: 20px;
+				border-radius: 25px;
+
+				position: absolute;
+				right: 0;
+				top: -10%;
+
+				transition: background-color .5s;
+			}
+
+			.btn:hover::after{
+				background-color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<button type="button" class="btn">Add to Card</button>
+		
+	</body>
+</html>

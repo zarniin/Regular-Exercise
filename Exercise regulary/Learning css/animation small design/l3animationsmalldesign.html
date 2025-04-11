@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Small Design</title>
+		<style type="text/css">
+
+			body{
+				height: 100vh;
+				background-color: #000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				padding: 0;
+				margin: 0;
+			}
+
+			.spinnerone,.spinnertwo,.spinnerthree,.spinnerfour{
+				width: 100px;
+				height: 100px;
+/*				background-color: orange;*/
+				border: 10px solid #fff;
+				border-top: 10px solid blue;
+				border-radius: 50%;
+
+				animation: myspinner 2s linear infinite;
+
+			}
+
+			.spinnertwo{
+				border-top: 10px solid blue;
+				border-bottom: 10px solid deepskyblue;
+			}
+
+			.spinnerthree{
+				border-left: 10px solid darkblue;
+				border-top: 10px solid blue;
+				border-bottom: 10px solid deepskyblue;
+			}
+
+			.spinnerfour{
+				border-left: 10px solid darkblue;
+				border-right: 10px solid steelblue;
+				border-top: 10px solid blue;
+				border-bottom: 10px solid deepskyblue;
+			}
+
+			@keyframes myspinner{
+				0%{
+					transform: rotate(0deg);
+				}
+
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="spinnerone"></div>
+		<div class="spinnertwo"></div>
+		<div class="spinnerthree"></div>
+		<div class="spinnerfour"></div>
+
+	</body>
+</html>

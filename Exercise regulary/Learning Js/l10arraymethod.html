@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Method</title>
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            // indexOf() 
+            const colors = ["red","blue","green","pink","yellow","skyblue"];
+            console.log(colors);
+            console.log(colors.length);// 6
+            console.log(colors[0]);
+            console.log(colors.indexOf("blue"));
+
+            // Array.isArray() 
+            const arrs = new Array("yu yu","lu lu","la la","mya mya","su su");
+            console.log(arrs);
+            console.log(Array.isArray(arrs));
+
+            // join() 
+            const hobbies = ["movie","eat","sports","run","walk"];
+            console.log(hobbies.join("****"));
+
+            //push(value in the front) 
+
+            const paints = ["red","green","blue","yellow","orange"];
+ 
+            paints.push("purple");
+            paints.push("mango");
+
+            console.log(paints);
+
+            // unshift(value in the end) 
+
+            paints.unshift("black");
+            paints.unshift("white");
+
+            console.log(paints);
+
+            // shift(Remove value & Index (in the front)) 
+
+            paints.shift();
+
+            console.log(paints);
+
+            // pop(Remove value & Index (in the end)) 
+
+            paints.pop();
+
+            console.log(paints);
+
+            const arr1 = [12,14,18,19,23,19,9,3,4,29,10];
+            const arr2 = ["aung aung","kyaw kyaw","min min","kaung kaung","la la"];
+
+            console.log(arr1.concat(arr2));
+
+            // Sort() 
+            console.log(arr1.sort());
+
+            // Just Reverse 
+            console.log(arr1.reverse());
+
+
+        </script>
+        
+
+    </body>
+</html>

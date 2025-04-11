@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction to JS</title>
+	</head>
+
+	<body>
+
+		<ul>
+			<li>Name : R zar ni</li>
+			<li>Age : 18</li>
+			<li>Gender : Male</li>
+			<li>Grade: student</li>
+			<li>Hobbies: Web Developer Programming</li>
+		</ul>
+
+
+
+
+		<script type="text/javascript">
+
+			var template;
+			// let template;
+			// const template; error override 
+
+			let name = "R zar ni";
+			let age = 18;
+			let gender = "Male";
+			let grade = "student";
+			let hobbies = "Web developer Programming";
+
+			// Without Template String
+
+			// const persons = 
+			// 	'<ul>'+
+			// 		'<li>Name = '+name+'</li>'+
+			// 		'<li>Age = '+age+'</li>'+
+			// 		'<li>Gender = '+gender+'</li>'+
+			// 		'<li>Grade = '+grade+'</li>'+
+			// 		'<li>Hobbies = '+hobbies+'</li>'+
+			// 	'</ul>';
+
+			// document.write(persons);
+			// console.log(persons);
+
+
+
+			// With Template String 
+
+			const persons = 
+			`<ul>
+				<li>Name = ${name}</li>
+				<li>Age = ${age}</li>
+				<li>Gender = ${gender}</li>
+				<li>Grade = ${grade}</li>
+				<li>hobbies = ${hobbies}</li>
+			</ul>`;
+
+			// console.log(persons);// undefined
+			document.write(persons);
+
+
+
+
+		</script>
+		
+	</body>
+</html>

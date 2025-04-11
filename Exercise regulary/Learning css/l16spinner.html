@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spinner</title>
+		<style type="text/css">
+
+			body{
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.spinner{
+				width: 300px;
+				
+				animation-name: myspinner;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+
+			@keyframes myspinner{
+				from{
+					transform: rotate(0deg);
+				}
+
+				to{
+					transform: rotate(360deg);
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<img src="./img/loader.svg" class="spinner" alt="loader.svg"/>
+
+	</body>
+</html>

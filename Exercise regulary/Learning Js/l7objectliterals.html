@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Literals</title>
+    </head>
+
+    <body>
+        
+        <script type="text/javascript">
+
+            const stundents = {
+                // key: value,
+                firstname: "R",
+                lastname: "zar ni",
+                age: 18,
+                gender: "Male"
+            };
+
+            console.log(stundents);// 
+            console.log(stundents.firstname);// R
+            console.log(stundents.lastname);// zar ni
+            console.log(stundents.age);// 18
+            console.log(stundents.gender);// Male
+
+            const persons = {
+                firstname: "aung aung",
+                lastname: "zar ni",
+                age: 19,
+                rs: true,
+                hascar: null,
+                money: undefined,
+                city:{
+                    hometown: "Yangon"
+                },
+
+                hobbies: ['sports','game','music','eat']
+            }
+
+            console.log(persons.firstname);
+            console.log(persons.lastname);
+            console.log(persons.age);
+            console.log(persons.rs);
+            console.log(persons.hascar);
+            console.log(persons.money);
+            console.log(persons.city.hometown);
+            console.log(persons.hobbies[persons.hobbies.length-1]);
+
+
+        </script>
+
+    </body>
+</html>

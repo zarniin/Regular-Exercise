@@ -1,0 +1,62 @@
+body{
+	font-family: sans-serif;
+	height: 100vh;
+}
+
+.accordion .acctitle{
+	background-color: purple;
+	color: #fff;
+	font-size: 16px;
+
+	padding: 20px;
+	margin: 0;
+
+	position: relative;
+
+	transition: background-color .5s ease;
+}
+
+.accordion .acctitle::before{
+	content: '\f0d7';
+	font-family: "Font Awesome 5 Free";
+
+	position: absolute;
+	right: 3%;
+	top: 0;
+
+	transform: translateY(80%);
+
+/*	float: right;*/
+}
+
+.accordion .acctitle.arrow::before{
+	content: '\f0d8';
+}
+
+.accordion .acctitle.arrow:hover{
+	background-color: blue;
+}
+
+.accordion .acctitle:hover{
+	background-color: skyblue;
+}
+
+.accordion .acctitle:active{
+	background-color: blue;
+}
+
+.accordion .acccontent{
+	height: 0;
+
+	background-color: #444;
+	color: #fff;
+	font-size: 16px;
+
+	padding: 0 20px;
+
+	text-indent: 50px;
+	text-align: justify;
+
+
+	overflow: hidden;
+}

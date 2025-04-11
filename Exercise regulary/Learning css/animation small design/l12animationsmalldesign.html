@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Small Design</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+				background-color: #000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				padding: 0;
+				margin: 0;
+			}
+
+			.box{
+				background-image: url(./img/circlebg.jpg);
+
+				-webkit-background-clip: text;
+
+				animation-name: myani;
+				animation-duration: 5s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+
+			.box h1{
+				color: transparent;
+				font-size: 80px;
+				text-transform: uppercase;
+				letter-spacing: 10px;
+
+				-webkit-text-stroke: 2px;
+			}
+
+			@keyframes myani{
+				from{
+					background-position: 0 0;
+				}
+
+				to{
+					background-position: 0 800px;
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<div class="box">
+			<h1>Welcome to R zar ni</h1>
+		</div>
+		
+	</body>
+</html>

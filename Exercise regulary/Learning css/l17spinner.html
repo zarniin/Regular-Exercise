@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spinner By SVG</title>
+		<style type="text/css">
+
+			body{
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.spinner{
+				width: 300px;
+				
+				animation-name: myspinner;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+
+			@keyframes myspinner{
+				0%{
+					transform: rotate(0deg) scale(1);
+				}
+
+				25%{
+					transform: rotate(360deg) scale(1.5);
+				}
+
+				50%{
+					transform: rotate(360deg) scale(1.5);
+				}
+
+				75%{
+					transform: rotate(0deg) scale(1);
+				}
+
+				100%{
+					transform: rotate(0deg) scale(1);
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<img src="./img/loader.svg" class="spinner" alt="loader.svg"/>
+
+	</body>
+</html>

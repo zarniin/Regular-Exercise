@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover Effect</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+				background-color: #272727;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.box{
+				width: 200px;
+				height: 200px;
+				color: #000;
+				font-size: 22px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				text-align: center;
+				line-height: 200px;
+
+				position: relative;
+
+			}
+
+			.box::before{
+				content: '';
+
+/*				width: 100%;
+				height: 100%;*/
+				border: 3px solid steelblue;
+				border-radius: 3px;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+
+				transition: transform .5s ease;
+			}
+
+
+			.box::after{
+				content: '';
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				transform: rotate(45deg);
+				z-index: -1;
+
+				transition: all .5s ease;
+			}
+
+			.box:hover::before{
+				transform: rotate(45deg);
+			}
+
+			.box:hover::after{
+				transform: rotate(45deg) scale(0.7);
+			}
+
+			.box:hover{
+				color: steelblue;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div class="box">Hover Me</div>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date and Time</title>
+	</head>
+	<body>
+
+		<div>
+			<small>&copy;<span id="year"></span> Government of Republic of the Union of Myanmar</small>
+		</div>
+
+
+		<script type="text/javascript">
+
+			let getdate = new Date(); // class object
+			console.log(getdate);// Wed Feb 12 2025 11:19:34 GMT+0630 (Myanmar Time)
+
+			let hours = getdate.getHours();
+			console.log(hours);// 11
+
+			let minutes = getdate.getMinutes();
+			console.log(minutes);// 21
+
+			let seconds = getdate.getSeconds();
+			console.log(seconds);// 5
+
+			// Method 1 
+			let time = getdate.getTime();
+			console.log(time);// 1739335952358
+
+			let gettime = Date.now(); // key word
+			console.log(time);
+
+			// array []
+			// 0 to 11 
+			// lengh 12 
+			//    0     1     2     3     4     5      6     7     8     9     10    11
+			// ['jan','feb','mar','apr','may','jun','july','Aug','Sep','Oct','Nov','Dec']
+			let getmonth = getdate.getMonth();
+			console.log(getmonth);
+
+			//    0     1     2     3      4     5     6
+			// ['sun','mon','tue','wed','thus','fri','sat']
+			let getday = getdate.getDay();
+			console.log(getday);
+
+			let getYear = getdate.getFullYear();
+			console.log(getYear);// 
+
+			let getUTCFullYear = getdate.getUTCFullYear();
+			console.log(getUTCFullYear);// 2025
+
+			// document.getElementById('year').textContent = getUTCFullYear;
+			// document.getElementById('year').innerText = getUTCFullYear;
+			// document.getElementById('year').innerHTML = getUTCFullYear;
+
+			// m/d/y 
+			// Birthday 
+
+			let birthday = new Date('9/17/2006');
+
+			birthday.setMonth('10');
+			birthday.setMinutes('11');
+			birthday.setSeconds('55');
+			birthday.setHours('11');
+			birthday.setTime('55');
+
+			console.log(birthday);
+
+
+		</script>
+		
+	</body>
+</html>

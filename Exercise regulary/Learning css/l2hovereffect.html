@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover Effect</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			button{
+				background: none;
+				color: #fff;
+				font-size: 15px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				border: none;
+
+				padding: 20px 80px;
+				margin: 20px;
+
+				position: relative;
+
+			}
+
+			.download-btn{
+				background-color: steelblue;
+			}
+
+			.download-btn:hover{
+				background-color: darkslateblue;
+			}
+
+			.download-btn:active{
+				background-color: lightsteelblue;
+			}
+
+			.upload-btn{
+				background-color: skyblue;
+			}
+
+			.upload-btn:hover{
+				background-color: deepskyblue;
+			}
+
+			.upload-btn:active{
+				background-color: mediumvioletred;
+			}
+
+			button::before{
+				content: 'hay';
+
+				width: 60px;
+				height: 100%;
+/*				background-color: green;*/
+
+/*				line-height: 4;*/
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			.download-btn::before{
+				background-color: darkblue;
+			}
+
+			.upload-btn::before{
+				background-color: darkorange;
+			}
+
+
+
+
+			
+		</style>
+	</head>
+	<body>
+
+		<button type="button" class="download-btn">Download Button</button>
+		<button type="button" class="upload-btn">Upload Button</button>
+
+		
+	</body>
+</html>

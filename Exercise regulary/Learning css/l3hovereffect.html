@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hover Effect</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			a{
+				width: 200px;
+				height: 60px;
+				background: linear-gradient(
+					60deg,
+					blue,
+					skyblue,
+					blue,
+					skyblue
+				);
+
+				background-size: 300%;
+
+				color: #fff;
+				font-size: 16px;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius: 50px;
+
+				text-align: center;
+				line-height: 60px;
+
+				box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+
+				transition: all .5s ease-in;
+				
+			}
+
+			a:active{
+				box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+				transform: translateY(4px);
+			}
+
+			a:hover{
+				background-position: right;
+			}
+
+
+
+
+			
+		</style>
+	</head>
+	<body>
+
+		<a href="#">Hover Me</a>
+
+		
+	</body>
+</html>

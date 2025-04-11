@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Small Design</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+				height: 100vh;
+				background-color: #000;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				padding: 0;
+				margin: 0;
+			}
+
+			h1{
+				color: transparent;
+				font-size: 40px;
+				text-transform: uppercase;
+				letter-spacing: 10px;
+
+				-webkit-text-stroke: 2px red;
+
+				white-space: nowrap;
+
+				position: relative;
+
+				overflow: hidden;
+			}
+
+			h1::before{
+				content: '';
+
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				animation: myani 10s linear infinite;
+				animation-direction: alternate;
+			}
+
+			@keyframes myani{
+				0%{
+					left: 100%;
+				}
+
+				100%{
+					left: 0%;
+				}
+			}
+
+
+			
+		</style>
+	</head>
+	<body>
+
+		<h1>Thank You For Shopping With Us...</h1>
+		
+	</body>
+</html>

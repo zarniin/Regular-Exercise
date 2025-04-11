@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Looping</title>
+	</head>
+	<body>
+
+
+		<script type="text/javascript">
+
+			let colors = ["red","green","blue","orange","pink"];
+			console.log(colors);// (5)['red', 'green', 'blue', 'orange', 'pink']
+			console.log(colors.length);// 5
+			console.log(colors[1]);// green
+			console.log(colors[4]);// pink
+
+			const obj = {
+				name: "aung aung",
+				age: 17
+			};
+
+			console.log(obj);
+			console.log(obj.name);// aung aung
+			console.log(obj.age);// 17
+
+			// 1. For Loop 
+			// => Syntax 
+			// 		start     end        ? 
+			// for(statement1,statement2,statement3){
+			// 		code to be executed;
+			// }
+
+			for(var i = 0; i < 10;i++){
+				console.log(i);
+			}
+
+			console.log("I outside value = ",i);// I outside value =  10
+
+			var j = 0;
+
+			for(j; j < 10;j++){
+				// console.log(j);
+
+				if(j == 5){
+					console.log("5 is my fav number. ");
+				}
+
+				console.log(j);
+
+
+			}
+
+			console.log("J outside value = ",j);// J outside value =  10
+
+			for(var k = 0;k < 10;k++){
+				console.log(k);
+
+				if(k == 3){
+					console.log("3 is my fav number.");
+					break;
+				}
+
+				// console.log(k);
+			}
+
+			console.log("K outside value = ",k);// K outside value = 10
+
+			for(var m = 0;m < 10;m++){
+				// console.log(m);
+
+				if(m == 3){
+					console.log("3 is my fav number.");
+					continue;
+				}
+
+				console.log(k);
+			}
+
+			console.log("M outside value = ",m);// M outside value = 10
+
+			for(var s = 10;s > 0;s--){
+				console.log(s);
+			}
+
+			console.log("S outside value = ",s);// S outside value =  0
+
+			// For Loop with Array 
+
+			const paints = ["red","green","blue","sky","pink"];
+
+			for(var w = 0; w < paints.length;w++){
+				console.log(paints[w]);
+			}
+
+
+			// For Loop with Object 
+			const address = [
+				{name:"R zar ni", age: 19},
+				{name:"Khin La Pyae", age: 21},
+				{name:"Ei Mon Phyo", age: 22}
+			];
+
+			for(var l = 0; l < address.length;l++){
+				// console.log(address[l]);
+
+				console.log("Name = " + address[l].name + " Age = " + address[l].age);
+			}
+
+			// 2. For in Loop 
+			// => Syntax 
+			// for(key/idx in obj/array){
+			// 	code to be execute;
+			// }
+
+			const students = {
+				name: "R zar ni",
+				age: 18,
+				grade: 10,
+				Gender: "Male"
+			};
+
+			for(key in students){
+				// console.log(key);
+				console.log(students[key]);
+			}
+
+			// For in Loop with object 
+
+			const members = {
+				name: "Ei Mon Phyo",
+				age: "18"
+			};
+
+			for(key in members){
+				console.log(members[key]);
+			}
+
+			// 3. For of Loop 
+			// => Syntax 
+			// for(idx of array){
+			// 	code to be execute;
+			// }
+
+			const arrboys = ["aung aung","kyaw kyaw","maung maung","zar zar"];
+
+			for(var arrboy of arrboys){
+				console.log(arrboy);
+			}
+
+			// For of Loop with string 
+			const thanks = "welcome";
+
+			for(thank of thanks){
+				console.log(thank);
+			}
+
+			// 4. While Loop 
+			// => Syntax 
+			// start 
+			// while(codintion){
+			// 	// Before Prinout 
+
+			// 	// code to be execute;
+
+			// 	// After Prinout 
+			// }
+
+			let b = 0;
+
+			while(b < 10){
+				console.log(b);
+				// After Prinout 
+				b++;
+			}
+
+			console.log("B outside value is = ",b);// B outside value is =  10
+
+			let c = 0;
+
+			while(c < 10){
+				c++;
+				console.log(c);
+			}
+
+			console.log("C outside value is = ",c);// C outside value is =  10
+
+			// Example While Loop (Array) 
+
+			const outeams = ["boy","girl","male","female"];
+
+			var z = 0;
+
+			while(z < outeams.length){
+				console.log(outeams[z]);
+				z++;
+			};
+
+			// Example While Loop (Object) 
+
+			const softwares = [
+				{
+					microsoft: "Office",
+					Driver: "IOB Driver",
+					text: "String"
+				}
+			];
+
+			var int = 0;
+
+			while(int < softwares.length){
+				console.log("Microsoft Name = " + softwares[int].microsoft + " Driver Name = " + softwares[int].Driver + " Text Name = " + softwares[int].text);
+				int++;
+			}
+
+			// 5. Do While Loop 
+			// => Syntax 
+			// do{
+
+				// 	After Printout 
+
+				// 	code to be execute;
+
+				// 	Before Printout
+
+			// }while(condition)
+
+			// Example 
+			let q = 0;
+
+			do{
+				console.log("i value is = ",q);
+				q++;
+			}while(q < 10);
+
+			let a = 0;
+
+			do{
+				a++;
+				console.log("Z value is = ",a);
+			}while(a < 10);
+
+			const getcolors = ["red","green","blue","orange"];
+
+			var cal = 0;
+
+			do{
+				console.log(getcolors[cal]);
+				cal++;
+
+			}while(cal < getcolors.length);
+
+			// 6.ForEach 
+			// => Syntax 
+			// mainarray.function(parameter1(value),parameter2(idx),parameter3(arry)){
+			// 	code to be execute;
+			// };
+
+			const candycolors = ["red","green","blue","orange","purple","pink"];
+
+			candycolors.forEach(function(val,idx,arr){
+				// console.log(val);
+				// console.log(idx);
+				// console.log(arr);
+				// console.log(candycolors);
+			});
+
+			// 7.Map 
+			// => Syntax 
+			// mainarray.function(val){
+			// 	code to be execute;
+			// };
+
+			const visitors = ["sai sai","shwe htoo","phyo lay","ny win","ni ni"];
+
+			// visitors.forEach(function(visitor){
+			// 	// console.log(visitor);
+			// 	console.log("Mr. "+visitor);
+			// });
+
+			// Map = PrintOut = return 
+			// const doctors = visitors.map(function(visitor){
+			// 	// console.log(visitor);
+			// 	return `Dr.${visitor}`
+			// });
+
+			// console.log(doctors);
+
+			// forEach = PrintOut = not return 
+			// visitors.forEach(function(visitor){
+			// 	// console.log(visitor);
+			// 	return `Dr.${visitor}`
+			// });
+
+			// 8.filter 
+			// => Syntax 
+			// mainarray.filter(function(val){
+			// 	code to executed;
+			// });
+
+			const ages = ["23,36,45,64,73,20,22,19,81,15,19"];
+			// console.log(ages);
+
+			const getover18 = ages.filter(function(age){
+
+				// console.log(age > 18);// boolean false 
+
+				return age > 18;
+			});
+
+			console.log(getover18);
+				
+		</script>
+		
+	</body>
+</html>

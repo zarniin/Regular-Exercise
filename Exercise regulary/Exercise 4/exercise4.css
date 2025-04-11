@@ -1,0 +1,94 @@
+*{
+	perspective: 700px;
+}
+
+body{
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	width: 500px;
+	height: 100px;
+	background-color: gray;
+
+}
+
+.div1{
+	width: 250px;
+	height: 100px;
+	background: linear-gradient(black,silver);
+	box-shadow: -5px 0 10px rgba(0,0,0,0.7);
+
+	border: 1px solid #000;
+
+	margin: auto;
+
+	position: relative;
+
+}
+
+.div2{
+	width: 250px;
+	height: 100px;
+	background: linear-gradient(black,silver);
+
+	border: 1px solid #000;
+
+	padding: 30px;
+	margin: auto;
+
+	transform: rotateX(45deg);
+
+	position: absolute;
+	left: -30px;
+	top: -100%;
+
+	z-index: 5;
+	
+}
+
+.div3{
+	width: 50px;
+	height: 100px;
+	background-color: white;
+	border: 1px dotted #000;
+
+	transform-origin: right;
+
+	transform: rotateY(45deg);
+
+	position: absolute;
+	left: 50%;
+	top: 0;
+
+	transition: transform .4s ease;
+
+}
+
+.div3:hover{
+	transform: rotateY(-90deg);
+}
+
+.div4{
+	width: 50px;
+	height: 100px;
+	background-color: white;
+	border: 1px dotted #000;
+
+	transform-origin: left;
+
+	position: absolute;
+	left: 35%;
+	top: 0;
+
+	transition: transform .5s ease;
+
+}
+
+.div4:hover{
+	transform: rotateY(90deg);
+}

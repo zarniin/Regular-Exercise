@@ -1,0 +1,115 @@
+/* Card (Card-content) */
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	width: 400px;
+	background-color: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.container h3,.container h4{
+	text-align: center;
+}
+
+.container .card{
+	padding: 30px 40px;
+}
+
+.form .form-group{
+	color: #777;
+	margin-bottom: 5px;
+}
+
+.form-group label{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.form-group .form-control{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #333;
+	margin-bottom: 10px;
+}
+
+.form-group .form-control:focus{
+	outline: none;
+	border-bottom: 1px solid steelblue;
+}
+
+.btn{
+	width: 100%;
+	padding: 10px;
+	color: #fff;
+	font-size: 16px;
+	background-color: steelblue;
+	border: none;
+	border-radius: 5px;
+}
+
+/* Card (Card-action) */
+
+.card .card-action{
+	border-top: 1px dashed #999;
+	border-bottom: 1px dashed #999;
+	margin: 20px 0;
+
+	position: relative;
+}
+
+.card-action .list-group{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-group .list-group-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+.delete-item{
+	color: red;
+}
+
+.clear-tasks{
+	width: 100px;
+	height: 30px;
+	text-decoration: none;
+	background-color: red;
+	color: #fff;
+	font-size: 17px;
+	border-radius: 5px;
+
+	text-align: center;
+	line-height: 30px;
+
+	position: absolute;
+	left: 0;
+	bottom: -20%;
+}
+
+.card .moretasks{
+	text-align: center;
+}
+
+.moretasks .loading{
+	width: 20px;
+}
+

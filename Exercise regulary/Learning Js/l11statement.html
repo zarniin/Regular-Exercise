@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Statement</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+
+            // Ternary Statement 
+            // c1 < c2 ? true : false 
+
+            const x = 100;
+            const y = 200;
+
+            console.log(x > y ? "Yes,it is True" : "No,it is False");// No,it is False
+            console.log(x < y ? "Yes,it is True" : "No,it is False");// Yes,it is True
+            console.log( ( x == y ) ? "Equal to x and y" : (x < y) ? "True" : "False" );// True
+
+            // Comparsion Operator 
+
+            const num1 = 100;
+            const num2 = 200;
+
+            // check value
+            console.log("== Equal to result = " + ( num1 == num2  ? "True" : "False"));// == Equal to result = True
+
+            // check value/datatype
+            console.log("=== Equal to result = " + ( num1 === num2  ? "True" : "False"));// === Equal to result = False
+
+            // check value
+            console.log("!= Not Equal to result = " + ( num1 != num2  ? "True" : "False"));// != Not Equal to result = True
+
+            // check value
+            console.log("!== Not Equal to result = " + ( num1 !== num2  ? "True" : "False"));// != Not Equal to result = True
+
+            console.log("> Greater than to result = " + ( num1 > num2 ? "True" : "False"));// > Greater than to result = False
+
+            console.log("> Greater than or equal to result = " + ( num1 >= num2 ? "True" : "False"));// > Greater than or equal to result = False
+
+            console.log("< Less than to result = " + ( num1 < num2 ? "True" : "False"));// > Less than to result = True
+
+            console.log("> Less than or equal to result = " + ( num1 <= num2 ? "True" : "False"));// > Less than or equal to result = True
+
+            // if (Statement) true / false  
+            // if(conditon){
+            //     code to execute;
+            // }
+
+            const idx = 30;
+
+            // if(idx > 10){
+            //     console.log("Correct");
+            //     console.log("Incorrect");
+            // }
+
+            // if(idx > 100){
+            //     console.log("Correct");
+            //     console.log("Incorrect");
+            // }
+
+            if(idx > 100){
+                console.log("Correct");
+            }else{
+                console.log("Incorrect");
+            }
+
+            // else if(Statement) 
+            // => Syntax 
+            // if(codition){
+            //     code to be execute;
+            // }else if(codition){
+            //     code to be execute;
+            // }else{
+            //     code to be execute;
+            // }
+
+            const j = 100;
+            const k = 100;
+
+            if(j > k){
+                console.log("j, it is Greater");
+            }else if(j == k){
+              console.log("j, it is equal to");
+            }else{
+                console.log("j,it is Less");
+            }
+
+            // Nested Conditon 
+
+            const password = "hifi6152";
+
+            if(password.length >= 5){
+                // console.log("Good Password");
+
+                if(password.indexOf(" ") == -1){
+                    console.log("Good Password");
+                }else{
+                    console.log("Password length longer")
+                }
+
+            }else{
+                console.log("Try again");
+            }
+
+            // Switch(Statement) 
+            // => Syntax 
+            // switch(codition){
+            //     case codition: 
+            //         code to be execute;
+            //         break;
+            //     case codition: 
+            //         code to be execute;
+            //         break;
+            //     case codition: 
+            //         code to be execute;
+            //         break;
+            //     case codition: 
+            //         code to be execute;
+            //         break;
+            //     case codition: 
+            //         code to be execute;
+            //         break;
+            //     default: 
+            //         code to be execute;
+            //         break;
+            // }
+
+            let color = "violet";
+
+            switch(color){
+                case "red":
+                    console.log("My fav color is not red");
+                break;
+
+                case "green": 
+                    console.log("My fav color is not green");
+                break;
+
+                case "violet": 
+                    console.log("My fav color is violet");
+                break;
+
+                case "green": 
+                    console.log("My fav color is green");
+                break;
+
+            }
+
+            let daycount = new Date().getMonth();
+            console.log(daycount);
+
+            let getmonth;
+
+            switch(daycount){
+                case 0:
+                    getmonth = "January";
+                break;
+
+                case 1:
+                    getmonth = "Febuary";
+                break;
+
+                case 2:
+                    getmonth = "March";
+                break;
+
+                case 3:
+                    getmonth = "April";
+                break;
+
+                case 4:
+                    getmonth = "May";
+                break;
+
+                case 5:
+                    getmonth = "June";
+                break;
+
+                case 6:
+                    getmonth = "July";
+                break;
+
+                case 7:
+                    getmonth = "Aguest";
+                break;
+
+                case 8:
+                    getmonth = "September";
+                break;
+
+                case 9:
+                    getmonth = "October";
+                break;
+
+                case 10:
+                    getmonth = "November";
+                break;
+
+                default: 
+                    getmonth = "December";
+                break;
+
+            }
+
+            console.log(getmonth);
+
+            // Assignment Opertor (=,+=,-=,*=,/=,%=) 
+
+            let p = 10;
+            let q = 20;
+
+            // p = q;
+            // console.log(q);// 20
+
+            // p += q;
+            // p = p + q
+            // console.log(p);// 30
+
+            // p -= q;
+            // p = p - q
+            // console.log(p);// -10
+
+            // p *= q;
+            // p = p * q;
+            // console.log(p);// 200
+
+            // p /= q;
+            // p = p / q;
+            // console.log(p);// 0.5
+
+            // p %= q;
+            // p = p % q;
+            // console.log(p);// 10
+
+            // Logical Operator  (and / or / not) 
+
+            // and &&
+            // const username = "Rzarni";
+            // const passcode = "123456";
+
+            // if(username === "Rzarni" && passcode === "123456"){
+            //     console.log("Welcome");
+            // }else{
+            //     console.log("Try Again");
+            // }
+
+            alert("Welcome");   
+
+            // or ||
+            const username = prompt("Enter User Name");
+            const passcode = prompt("Enter User Passcode");
+
+            if(username === "Rzarni" || passcode === "12345"){
+                console.log("Welcome");
+            }else{
+                console.log("Try Again");
+            }
+
+            
+        </script>
+    </body>
+</html>
+
+<!-- 
+    (1).Comparsion Operator 
+        (i).equal to (==) 
+        (ii).equal to (===) 
+        (ii).not equal (!=) 
+        (ii).not equal (!==) 
+        (iv).Greatar than (>) 
+        (v).Greatar than or equal to (>=) 
+        (vi).Less than (<) 
+        (vii).Less than or equal to (<=) 
+
+    (2).Assignment Operator 
+            =
+            +=
+            -=
+            *=
+            /=
+            %=
+
+    (3).Logical Operator 
+        and &&
+        or ||
+        not !
+
+    (4).Ternary Operator 
+ -->
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        
+        <script type="text/javascript">
+
+            let arrs = new Array("mg mg","aung aung","nu nu","su su","maung maung","yu yu");
+            console.log(arrs);
+            console.log(arrs[0]);// mg mg
+            console.log(arrs[3]);// su su
+            console.log(arrs[arrs.length-1]);// yu yu
+
+            let x = [200,100,"hello",undefined,null,true,false,['hobbies','sports'],{firstname: "aung aung"}];
+            console.log(x);
+
+            let paints = [];
+
+            paints[0] = "red";
+            paints[3] = "white";
+            paints[2] = "black";
+            paints[1] = "green";
+
+            console.log(paints);
+
+            // Nested Array 
+
+            let colors = [
+                ["red","black","white"],
+                ["rgba","hsla","cynk"],
+                ["cow","dog",["animals","people"]]
+            ];
+
+            console.log(colors[0][2]);// white
+            console.log(colors[1][1]);// hsla
+            console.log(colors[2][2][0]);// animals
+
+
+
+        </script>
+    </body>
+</html>

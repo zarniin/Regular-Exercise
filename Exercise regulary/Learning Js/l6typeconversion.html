@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Type Conversion</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+
+            // String Character array 
+            let name = "R zar ni";
+            console.log(name);// R zar ni
+            console.log(typeof name);// string
+            console.log(name.length);// 8
+
+            // Number to String 
+            let number = 10;
+            number = "10";
+            number = String(10);
+            console.log(number);
+            console.log(typeof number);// string
+            console.log(number.length);// 2
+
+            // Boolean to String 
+            let hascar = true;
+            hascar = "true";
+            hascar = String(true);
+            console.log(hascar);// true
+            console.log(typeof hascar);// string
+            console.log(hascar.length);// 8
+
+            // Object to String 
+            let date = new Date();
+            date = "new Date()"; // new Date()
+            date = String(new Date()); 
+            console.log(date);// Wed Feb 12 2025 20:19:37 GMT+0630 (Myanmar Time)
+            console.log(typeof date);// string
+            console.log(date.length);// 48
+
+            // Array to String 
+            let color = [1,2,3,4,5,6];
+            color = "[1,2,3,4,5,6]";// [1,2,3,4,5,6]
+            color = String([1,2,3,4,5,6]);//1,2,3,4,5,6
+            console.log(color);// 
+            console.log(typeof color);// string
+            console.log(color.length);// 11
+
+            // String to Number  (can't)
+            let num = "20";
+            num = Number("20");//
+            num = +"20";
+            console.log(num);// 
+            console.log(typeof num);// 
+
+            // Boolean to Number  (can) 
+            let cars = true;
+            cars = Number(true);
+            cars = +true;
+            console.log(cars);// 1
+            console.log(typeof cars);// number
+
+            // Object to Number  (can)
+            let getdate = new Date();
+            getdate = Number(new Date());
+            getdate = +new Date();
+            console.log(getdate);// 1
+            console.log(typeof getdate);// number
+            
+            // Array to Number 
+            let nature = ["wooden","sky","sun"];
+            nature = Number(["wooden","sky","sun"]);// NAN = Not a Number
+            // console.log(nature);
+            console.log(typeof(nature));
+
+            let val;
+            val = "50" + 56.99;
+            console.log(val);
+            console.log(typeof(val));
+
+            // toFixed() Number can't string
+            val = 89.666;
+            console.log(val);
+            console.log(val.toFixed());// 90
+            console.log(typeof val);
+
+            // toPrecision() Number can't string
+            val = 89.666;
+            console.log(val);
+            console.log(val.toPrecision(2));// 90
+            console.log(typeof val);
+
+            // parseInt() can string 
+            val = "89.908";
+            val = parseInt(val);
+            console.log(val);
+            console.log(val.toPrecision(2));// 90
+            console.log(typeof val);
+
+            // parseFloat() can string
+            val = "89.908";
+            val = parseInt(val);
+            console.log(val);
+            console.log(val.toPrecision(2));// 90
+            console.log(typeof val);
+
+
+            // String to Array  
+            // Note : number / boolean / object can't convert Array 
+            let array = Array.from("R zar ni");
+            console.log(array);
+            console.log(array.length);// 8
+
+
+
+
+
+        </script>
+
+    </body>
+</html>
