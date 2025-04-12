@@ -1,0 +1,125 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+}
+
+.modal-btn,.btn{
+	background-color: green;
+	color: #fff;
+	border: none;
+
+	padding: 12px 25px;
+}
+
+.modal{
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	z-index: 10;
+
+	display: none;
+}
+
+.modal-dialog{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.modal-contact{
+	width: 700px;
+	background-color: #f4f4f4;
+
+	padding: 20px;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+.modal-header{
+	text-align: center;
+}
+
+.images{
+	width: 100px;
+	border-radius: 50%;
+}
+
+.btn-close{
+	color: #888;
+
+	font-size: 35px;
+	font-weight: bold;
+
+	position: absolute;
+	right: 25px;
+	top: 20px;
+
+
+	cursor: pointer;
+}
+
+.btn-close:hover{
+	color: #333;
+}
+
+.modal-body{
+	padding: 10px;
+}
+
+input[class="form-control"]{
+	width: 100%;
+	border: none;
+	outline: none;
+
+	padding: 15px 14px;
+	margin: 10px 0;
+}
+
+input[class="form-control"]:focus{
+	border-top: 2px solid #eee;
+}
+
+.d-grid .btn{
+	width: 100%;
+	margin: 12px 0;
+}
+
+span.forgot{
+	float: right;
+}
+
+.fade{
+/*	color: #444;*/
+
+	animation: myani .5s linear;
+}
+
+@keyframes myani{
+	from{
+/*		transform: scale(0);*/
+		opacity: 0;
+	}
+
+	to{
+/*		transform: scale(1);*/
+		opacity: 1;
+
+	}
+}
+
+
+
+
+
+

@@ -20,6 +20,15 @@ getbtnclose.addEventListener('click',function(){
 
 });
 
+window.onclick = function(e){
+	// console.log(e.target);
+
+	if(e.target === getmodalbox){
+		getmodalbox.style.display = "none";
+	}
+}
+
+
 // console.log(document); 
 // console.log(document.documentElement);
 
