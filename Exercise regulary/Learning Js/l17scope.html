@@ -8,6 +8,95 @@
 		<script type="text/javascript">
 
 			// Global Scope 
+
+				const name = "Kyaw Kyaw";
+					  // name = "Zaw Zaw"; // Error => Assignment to constant variable.
+				console.log(name);
+				// console.info(name);
+				// console.log(typeof name);// string 
+
+				let city = "Yangon";
+					city = "Mandalay";
+				// let city = "Bago"; // Error =>  has already been declared 
+				console.warn(city);
+
+				var country = "Thailand";
+					country = "Srilanka";
+				var country = "Vitnam";
+				console.error(country);
+
+			// -------------------------------------------------------------------------------------------
+
+			// Loop 
+				
+					// for(const a = 0; a < 10;a++){
+					// 	console.log(a);
+					// }
+
+					// console.log("A outside value is ",a);// Error
+
+					// for(let b = 0; b < 10;b++){
+					// 	console.log("B value is = ",b);// 0 to 9
+					// }
+
+					// console.log("B outside value is = ",b);// Error => b is not defined
+
+					// for(var c = 0; c < 10;c++){
+					// 	console.log("C value is = ",c);// 0 to 9
+					// }
+
+					// console.log("C outside value is = ",c);// C outside value is =  10
+
+
+				// New Declare
+					const d = 0;
+					let e = 1;
+					var f = 2;
+
+					// for(const d = 1; d < 10;d++){
+					// 	console.log("D value is = ",d);// D value is =  1
+					// }
+
+					// console.log("D outside value is = ",d);// Error => Assignment to constant variable.
+
+					// for(let e = 2; e < 10;e++){
+					// 	console.log("E value is = ",e);// 2 to 9
+					// }
+
+					// console.log("E outside value is = ",e);// E outside value is =  1
+
+					for(var f = 3; f < 10;f++){
+						console.log("F value is = ",f);// 3 to 9
+					}
+
+					console.log("F outside value is = ",f);// F outside value is =  10
+
+			// -------------------------------------------------------------------------------------------
+
+			// Object 
+
+				// Const Object 
+					const customers = {
+						fullname: "R zar ni",
+						email: "rzarni17906@gmail.com",
+						phone: "+959769879625"
+					}
+
+					console.table(customers);
+
+					customers.fullname = "Khin La Pyae";
+					customers.phone = "+959671818153";
+
+					// Error 
+					// const customers = {
+					// 	citizens: "Burmese"
+					// };
+
+
+
+
+
+
 			
 		</script>
 		
