@@ -54,7 +54,7 @@ const lis = document.getElementsByClassName('list-group-item');
 lis[1].style.color = "red";
 lis[2].textContent = "How to read";
 lis[2].innerText = "How to cook";
-lis[2].innerHTML = ``;
+lis[2].innerHTML = `List Item 3 <a href="#" id="delete-item3" class="delete-item"><i class="fas fa-trash-alt"></i></a>`;
 console.log(lis);
 
 
