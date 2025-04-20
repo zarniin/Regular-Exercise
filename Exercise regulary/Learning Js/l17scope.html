@@ -191,8 +191,72 @@
 
 					funone();// 60
 
+				// Function Scope 
+					function funtwo(){
+						const num1 = 100;
+						let num2 = 200;
+						var num3 = 300;
 
+						console.log(num1+num2+num3);
+					}
 
+					funtwo();// 600
+
+				console.log("Global Function Variable by const = ",number1);// Global Function Variable by const =  10
+				console.log("Global Function Variable by let = ",number2);// Global Function Variable by let =  20
+				console.log("Global Function Variable by var = ",number3);// Global Function Variable by var =  30
+
+				// console.log("Function Scope Variable by const = ",num1);// error
+				// console.log("Function Scope Variable by let = ",num2);// error
+				// console.log("Function Scope Variable by var = ",num3);// error 
+
+				// Override 
+
+					// const p = 100;
+					// let q = 200;
+					// var r = 300;
+
+					// function funthree(){
+					// 	// p = 10; // error
+					// 	q = 20;
+					// 	r = 30;
+
+					// 	console.log(p+q+r);
+					// 	console.log("q is inside value is = ",q);// q is outside value is =  20
+					// 	console.log("r is inside value is = ",r);// r is outside value is =  30
+					// }
+
+					// funthree();
+
+					// console.log("p is outside value is = ",p);// p is outside value is =  100
+					// console.log("q is outside value is = ",q);// q is outside value is =  20
+					// console.log("r is outside value is = ",r);// r is outside value is =  30
+
+				// New Declare 
+
+				const p = 100;
+				let q = 200;
+				var r = 300;
+
+				function funthree(){
+					const p = 10;
+					let q = 20;
+					var r = 30;
+
+					console.log(p+q+r);
+
+					console.log("p inside value is = ",p);// p inside value is =  10
+					console.log("q inside value is = ",q);// q inside value is =  20
+					console.log("r inside value is = ",r);// r inside value is =  30
+				}
+
+				funthree();
+
+				console.log("p outside value is = ",p);// p outside value is =  100
+				console.log("q outside value is = ",q);// q outside value is =  200
+				console.log("r outside value is = ",r);// r outside value is =  300
+
+			// -------------------------------------------------------------------------------------------
 
 
 
