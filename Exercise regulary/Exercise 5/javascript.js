@@ -222,6 +222,177 @@ val = document.scripts[0].type;// text/javascript
 	
 	console.log(getul);
 
+// Create Element 
+
+	const newli = document.createElement('li');
+
+	// Add ID 
+	newli.id = "new-item";
+
+	// Add Class
+	newli.className = "list-group-item";
+	newli.className = "delete-me";
+	newli.className = "list-group-item delete-me";
+
+	// Add Method 
+	newli.classList.add('delete-i');
+	newli.classList.add('delete-you');
+	newli.classList.add('delete-we','delete-our','delete-your');
+
+	// Add Attribute 
+	// setAttribue(quafiledname,value)
+	newli.setAttribute('title','new-item');
+
+	// newli.textContent = "hi";
+	// newli.textContent = "hay";
+	// newli.innerHTML = `List Item 6 <a href="#" id="delete-item3" class="delete-item"><i class="fas fa-trash-alt"></i></a>`;
+
+	// Add Create Text Node
+	// Method 1
+	// const newtext = document.createTextNode('Hello World');
+	// console.log(newtext);
+
+	// Method 2 
+	newli.appendChild(document.createTextNode('List Item 6'));
+
+	// a tag
+	const newlink = document.createElement('a');
+
+	// ADD href 
+	newlink.href = "#";
+
+	// ADD ID 
+	newlink.id = "delete-item6";
+
+	// ADD Class 
+	// newlink.className = "delete-item";
+	newlink.classList.add('delete-item');
+
+	newli.appendChild(newlink);
+
+	// i tag 
+	const newitalic = document.createElement('i');
+
+	// Add Class 
+	// newitalic.className = "fas fa-trash-alt";
+	newitalic.classList.add('fas','fa-trash-alt');
+
+	newlink.appendChild(newitalic);
+
+	// Method 1 
+	// const ul = document.querySelector('ul');
+	// ul.appendChild(newli);
+	// console.log(ul);
+
+	document.querySelector('ul').appendChild(newli);
+
+
+// Replace Element 
+	// replaceChild(old,new); 
+
+	const newtitleh2 = document.createElement('h2');
+
+	// Add ID 
+	newtitleh2.id = "tasktitle";
+
+	const getcaption = document.createTextNode('All my List');
+	// console.log(getcaption);
+	newtitleh2.appendChild(getcaption);
+
+	console.log(newtitleh2);
+
+	const oldtitleh4 = document.querySelector('h4');
+
+	const getcardaction = document.querySelector('.card-action');
+	
+	console.log(oldtitleh4);
+
+	getcardaction.replaceChild(newtitleh2,oldtitleh4);
+	console.log(getcardaction);
+
+// Remove (self) 
+
+	const getlis = document.querySelectorAll('li');
+	// getlis[0].remove();
+	// getlis[3].remove();
+	// getlis[5].remove();
+
+	console.log(getlis);
+
+// RemoveChild 
+
+	const getfirstul = document.querySelector('ul');
+
+	// getfirstul.removeChild(getlis[0]);
+	// getfirstul.removeChild(getfirstul.children[0]);
+	// getfirstul.removeChild(getlis[3]);
+	console.log(getfirstul);
+
+// Add Attribute 
+
+	const firstli = document.querySelector('li');
+	const getfirstchild = firstli.children[0];
+	console.log(getfirstchild);
+	console.log(getfirstchild.href);// route #
+	console.log(getfirstchild.id);// delete-item1
+	console.log(getfirstchild.className);// delete-item
+	console.log(getfirstchild.getAttribute('href'));// # 
+	console.log(getfirstchild.title);// new-item
+	console.log(getfirstchild.getAttribute('title'));// new-item
+	console.log(getfirstchild.alt);// undefined
+	console.log(getfirstchild.getAttribute('alt'));// delete
+	console.log(getfirstchild.hay);// undefined
+	console.log(getfirstchild.getAttribute('hay'));// hello
+
+	// getfirstchild.href = "https://google.com";
+	// getfirstchild.setAttribute('href','https://telegram.me');
+	// console.log(getfirstchild);
+
+	// hasAttribute  Boolean (True / False)
+	const hascar = getfirstchild.hasAttribute('href');
+	console.log(hascar);// true
+
+
+// ClassName Vs ClassList 
+
+	console.log(getfirstchild.className);// delete-item
+
+	// ClassName 
+	getfirstchild.className = "delete-myself";
+	getfirstchild.className = "delete-item delete-myself";
+	getfirstchild.className = "delete-item delete-myself delete-ourselves";
+
+	// ClassList 
+	getfirstchild.classList.add('delete-myself');
+	getfirstchild.classList.add('delete-ourselves');
+
+	// getfirstchild.classList.add('delete-item');
+	// getfirstchild.classList.add('delete-myself');
+	// getfirstchild.classList.add('delete-ourselves');
+	console.log(getfirstchild);
+
+
+// Check value ClassName vs ClassLIst
+
+	// ClassName 
+	if(getfirstchild.className === "delete-item delete-myself delete-ourselves"){
+		console.log("yes");
+	}else{
+		console.log("no");
+	}
+
+	// ClassList
+
+	if(getfirstchild.classList.contains('delete-myself')){
+		console.log("yes");
+	}else{
+		console.log("no");
+	}
+
+
+
+
+
 
 
 
