@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Modal Box</title>
+      <link href="./style.css" rel="stylesheet" type="text/css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <h2>Modal Singup Form</h2>
+
+        <button type="button" id="signup-btn" class="signupbtn">Sign Up</button>
+        <button type="button" id="openfullscreen-btn" class="fullscreenbtn">Open Full Screen</button>
+        <button type="button" id="clsfullscreen-btn" class="closefullscreenbtn">Close Full Screen</button>
+
+        <div id="loginsignup-btn" class="modal">
+
+          <span class="btn-close" title="Close Modal">&times;</span>
+
+          <form class="form" action="" method="">
+
+            <h3>Register Form</h3>
+
+            <div class="input-group">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="username" class="input-group-text" placeholder="Username" />
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" name="username" class="input-group-text" placeholder="Email" />
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-key icon"></i>
+                <input type="text" name="username" class="input-group-text" placeholder="Password" />
+            </div>
+
+            <button type="button" class="btn">Register</button>
+
+          </form>
+
+        </div>
+    </div>
+
+    <script src="./app.js" type="text/javascript"></script>
+
+  </body>
+</html>

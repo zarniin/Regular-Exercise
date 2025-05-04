@@ -13,25 +13,75 @@ getform.addEventListener('submit',(e) =>{
 
 });
 
+const gettodos = JSON.parse(localStorage.getItem('todos'));
+// console.log(gettodos);
 
-function addnew(){
+if(gettodos){
+
+	gettodos.forEach(function(gettodo){
+		// console.log(gettodo);
+		addnew(gettodo);
+	});
+}
+
+function addnew(gettodo){
 	// console.log('hi');
 
-	let textbox = gettextbox.value;
+	let todotext = gettextbox.value;
 
-	const newli = document.createElement('li');
-	const newtxt = document.createTextNode(textbox);
-	newli.append(newtxt);
-	console.log(newli);
-	getul.append(newli);
+	if(gettodo){
+		todotext = gettodo.text;
+	}
 
-	newli.addEventListener('click',function(e){
-		newli.classList.toggle('completed');
+	if(todotext){
+
+		const li = document.createElement('li');
+
+		if(gettodo && gettodo.done){
+			li.classList.add('completed');
+		}
+
+		li.appendChild(document.createTextNode(todotext));
+		// console.log(li);
+		getul.appendChild(li);
+		gettextbox.value = "";
+		gettextbox.focus();
+
+		updatelocalstorage();
+
+		li.addEventListener('click',function(){
+			li.classList.toggle('completed');
+			updatelocalstorage();
+		});
+
+		li.addEventListener('contextmenu',(e) =>{
+			li.remove();
+			updatelocalstorage();
+			e.preventDefault();
+
+		});
+
+	}
+
+}
+
+
+function updatelocalstorage(){
+
+	const alllis = document.querySelectorAll('li');
+	// console.log(alllis);
+
+	let todos = [];
+
+	alllis.forEach(function(allli){
+		// console.log(allli.textContent);
+
+		todos.push({
+			text:allli.textContent,
+			done:allli.classList.contains('completed')
+		});
 	});
 
-	newli.addEventListener('contextmenu',function(e){
-		newli.remove();
+	localStorage.setItem('todos',JSON.stringify(todos));
 
-		e.preventDefault();
-	});
 }

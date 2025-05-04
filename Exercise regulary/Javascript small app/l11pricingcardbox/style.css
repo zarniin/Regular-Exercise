@@ -1,0 +1,196 @@
+:root{
+	--color1: linear-gradient(
+		to right,
+		steelblue,
+		skyblue
+	);
+
+	--color2: linear-gradient(
+		to top,
+		steelblue,
+		skyblue
+	);
+
+	--color3: linear-gradient(
+		to left,
+		steelblue,
+		skyblue
+	);
+}
+
+body{
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title{
+	margin-bottom: 30px;
+}
+
+h3{
+	font-size: 2rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.toggle-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.toggle-checkbox{
+	visibility: hidden;
+}
+
+.toggle-label{
+	width: 40px;
+	height: 20px;
+	background-color: silver;
+	border-radius: 50px;
+	margin: 0px 15px;
+
+	position: relative;
+}
+
+.toggle-label .ball{
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+
+	position: absolute;
+	left: 2px;
+	top: 2.5px;
+
+	animation: offani .3s linear forwards;
+}
+
+.toggle-checkbox:checked + .toggle-label{
+	background-color: steelblue;
+}
+
+.toggle-checkbox:checked + .toggle-label .ball{
+	animation: onani .3s linear forwards;
+}
+
+@keyframes onani{
+	0%{
+		transform: translate(0px) scale(1);
+	}
+
+	50%{
+		transform: translate(10.5px) scale(1.2);
+	}
+
+	100%{
+		transform: translate(20px) scale(1);
+	}
+}
+
+@keyframes offani{
+	0%{
+		transform: translate(21px) scale(1);
+	}
+
+	50%{
+		transform: translate(10.5px) scale(1.2);
+	}
+
+	100%{
+		transform: translate(0px) scale(1);
+	}
+}
+
+.price-container{
+	width: 100%;
+
+	display: flex;
+}
+
+.price-box{
+	width: 300px;
+	background-color: #fff;
+	text-align: center;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+
+	padding: 20px 0;
+}
+
+.box{
+	padding: 20px 0;
+	color: #fff;
+}
+
+.box,.btn1{
+	background: var(--color1);
+}
+
+.box,.btn2{
+	background: var(--color2);
+}
+
+.box,.btn3{
+	background: var(--color3);
+}
+
+.price-box p{
+	font-size: 15px;
+	background-color: steelblue;
+	color: #fff;
+
+	padding: 10px 0;
+}
+
+.price-box div span{
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.price-box div span:nth-of-type(2){
+	font-size: 40px;
+}
+
+.price-list .list-group{
+	list-style: none;
+
+	padding: 0;
+	margin: 0;
+
+	margin-bottom: 30px;
+}
+
+.price-list .list-group .list-group-item{
+	font-size: 12px;
+	border-bottom: 1px solid #ddd;
+
+	padding: 10px 0;
+}
+
+.price-list .list-group .list-group-item:first-child{
+	border-top: 1px solid #ddd;
+}
+
+.btn{
+	text-decoration: none;
+	background-color: green;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 3px;
+	padding: 10px 35px;
+
+	cursor: pointer;
+
+	transition: font-size .3s ease-in;
+}
+
+.btn:hover{
+	font-size: 18px;
+}
+
+.price-box:nth-of-type(2){
+	transform: scale(1.1);
+}

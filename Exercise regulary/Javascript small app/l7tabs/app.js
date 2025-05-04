@@ -17,12 +17,12 @@ function gettabs(e,link){
 
 		getbtnclose[x].addEventListener('click',function(){
             this.parentElement.style.display = "none";
-        });
+    });
 
 	}
 
 
-	
+
 	for(var y = 0; y < gettabpanels.length;y++){
 
 		gettabpanels[y].style.display = "none";
